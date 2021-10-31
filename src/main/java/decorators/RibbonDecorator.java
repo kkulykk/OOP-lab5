@@ -10,6 +10,6 @@ public class RibbonDecorator extends ItemDecorator{
 
     @Override
     public double getPrice() {
-        return (13 + super.getPrice());
+        return (40 + super.getPrice());
     }
 }

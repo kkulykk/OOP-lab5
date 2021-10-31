@@ -1,11 +1,13 @@
 package flowerstore;
 
 import java.util.Arrays;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter @ToString
+@Getter @Setter @ToString @AllArgsConstructor
 public class Flower extends Item {
     private double price;
     private double sepalLength;

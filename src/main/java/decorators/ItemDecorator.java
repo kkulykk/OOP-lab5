@@ -3,7 +3,7 @@ package decorators;
 import flowerstore.Item;
 
 public class ItemDecorator extends Item {
-    private final Item item;
+    private Item item;
 
     public ItemDecorator(Item item) {
         this.item = item;
