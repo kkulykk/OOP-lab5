@@ -5,9 +5,8 @@ import decorators.PaperDecorator;
 import decorators.RibbonDecorator;
 import delivery.DHLDeliveryStrategy;
 import delivery.PostDeliveryStrategy;
-
-
-import java.util.ArrayList;
+import payment.CreditCardPaymentStrategy;
+import payment.PayPalPaymentStrategy;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,6 +36,24 @@ class FlowerTest {
         assertEquals(15, flower.getSepalLength());
     }
 }
+
+class PaymentTest {
+    PayPalPaymentStrategy paypal;
+    CreditCardPaymentStrategy card;
+
+    @org.junit.jupiter.api.BeforeEach
+    void setUp() {
+        paypal = new PayPalPaymentStrategy();
+        card = new CreditCardPaymentStrategy();
+    }
+
+    @org.junit.jupiter.api.Test
+    void pay() {
+        assertEquals("Payed with PayPal", paypal.pay(20));
+        assertEquals("Payed with credit card", card.pay(20));
+    }
+}
+
 
 class DeliveryTest {
     DHLDeliveryStrategy dhlDelivery;

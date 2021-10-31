@@ -2,7 +2,7 @@ package payment;
 
 public class CreditCardPaymentStrategy implements Payment{
     @Override
-    public void pay(double price) {
-        System.out.println("Payed with credit card");
+    public String pay(double price) {
+        return "Payed with credit card";
     }
 }

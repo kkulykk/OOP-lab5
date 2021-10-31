@@ -2,7 +2,7 @@ package payment;
 
 public class PayPalPaymentStrategy implements Payment {
     @Override
-    public void pay(double price) {
-        System.out.println("Payed with PayPal");
+    public String pay(double price) {
+        return "Payed with PayPal";
     }
 }
