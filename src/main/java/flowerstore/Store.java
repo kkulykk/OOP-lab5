@@ -49,7 +49,7 @@ public class Store {
                 tulipsAmount += 1;
             }
             FlowerPack oneFlowerPack = new FlowerPack(chosenFlower, 1);
-            oneFlowerBucket.addFlower(oneFlowerPack);
+            oneFlowerBucket.addFlowerPack(oneFlowerPack);
             Storage.remove(flowerIndex);
         }
         System.out.println("We formed your bucket for the price "+totalSum+".\nWe propose you to buy "+chamomilesAmount+" chamomiles, "+rosesAmount+" roses and "+tulipsAmount+" tulips.");

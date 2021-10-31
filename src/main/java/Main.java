@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("WELCOME TO THE STORE!\n");
         newStore.fillStore();
-        newStore.search(250);
+        newStore.search(500);
     }
 
 }

@@ -1,6 +1,7 @@
 package flowerstore;
 
 
+import lombok.Getter;
 import lombok.ToString;
 
 import java.util.ArrayList;
@@ -8,10 +9,11 @@ import java.util.List;
 
 
 @ToString
-public class FlowerBucket {
+public class FlowerBucket extends Item {
+    @Getter
     List<FlowerPack> flowerPacks = new ArrayList<>();
 
-    public void addFlower(FlowerPack flowerPack) {
+    public void addFlowerPack(FlowerPack flowerPack) {
         flowerPacks.add(flowerPack);
     }
 
@@ -25,5 +27,10 @@ public class FlowerBucket {
             price += flowerPack.getPrice();
         }
         return price;
+    }
+
+    @Override
+    public String getDescription() {
+        return("This is flower bucket of size "+getSize()+" and price "+getPrice()+".");
     }
 }

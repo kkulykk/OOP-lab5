@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter @Setter @ToString
-public class Flower {
+public class Flower extends Item {
     private double price;
     private double sepalLength;
     private int[] color;
@@ -18,5 +18,10 @@ public class Flower {
 
     public Flower(FlowerType flowerType) {
         this.flowerType = flowerType;
+    }
+
+    @Override
+    public String getDescription() {
+            return("This is "+getFlowerType()+" flower.");
     }
 }
